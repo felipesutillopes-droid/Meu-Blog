@@ -14,15 +14,21 @@
             padding: 16px;
         }
             main{
-        max-width: 800px;
+            max-width: 800px;
             margin: 0 auto;
             background-color: #0F9EE5;
-            color:#000000
+            color:#000000;
+            display: flex; 
             }
         img{
             width: 500px;
             height: 500px;
         }
+        .artigo-autor{
+        font-weight: bold;
+        }
+           
+        
     </style>
 </head>
 <body>
@@ -31,8 +37,21 @@
    <h2>ultimas noticias esportivas da região norte pioneira do Paraná </h2>
     </header>
     <main>
-        <h2>jogos escolares</h2>
         <img src="esportes.jpeg" alt="">
+        <div>
+        <h2>jogos escolares</h2>
+        <p>ocorreu a fase regional entre os dias 15 e 20 de maio de 2026, diversas modalidades de esportes</p>
+        <button>👍​⚠️​<span>0</span>​</button>
+        </div>
     </main>
 </body>
+<script>
+    const botao = document.querySelector("button");//variavel para acessar botão
+    botao.addEventListener ("click", botaoClicado);//quando houver um click vai ser contabilizado 
+    function botaoClicado() {// cria um conjunto de instruções que será executado quando o clique acontecer.
+        console.log("fui clicado");// serve para verificação 
+        let texto = botao.querySelector("span");// serve para mostrar os numeros aumentando dos clicks 
+        texto.textContent++;
+    }
+</script>
 </html>
